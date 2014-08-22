@@ -1,6 +1,7 @@
+/.viminfo
 /swap
 doc/tags
 .netrwhist
-/undo
+/.undo
 /spell
 /view

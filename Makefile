@@ -1,5 +1,6 @@
 DOTFILES = $(HOME)/.vimrc $(HOME)/.gvimrc
 MINEFILES = vimrc.mine gvimrc.mine
+ME ?= example
 TARGETS = $(DOTFILES) $(MINEFILES)
 SHELL = /bin/bash
 CWD = $(shell pwd)
@@ -16,15 +17,24 @@ endef
 all:
 	@echo type make install.
 
-%.mine: %.mine.example
+clearfiles =
+ifeq ($(OVERWRITE),1)
+	clearfiles += clean_mine
+endif
+
+clean_mine:
+	rm -f $(MINEFILES)
+
+%.mine: %.mine.$(ME)
 	$(call check_file,$@)
-	cp $@.example $@
+	@echo Using $(ME) $* file
+	@cp $< $@
 
 $(HOME)/.%: %
 	$(call check_file,$@)
 	ln -fs $(PWD)/$< $@
 
-install: $(TARGETS)
+install: $(clearfiles) $(TARGETS)
 	git submodule update --init
 
 update:
@@ -32,4 +42,4 @@ update:
 	git submodule sync
 	git submodule update --init
 
-.PHONY: install update
+.PHONY: install update clean_mine

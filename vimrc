@@ -52,12 +52,11 @@ set backspace=eol,start,indent  " Allow backspacing over indent, eol, & start
 set complete=.,w,b,u,U,t,i,d    " Do lots of scanning on tab completion
 set updatecount=100             " Write swap file to disk every 100 chars
 set directory=~/.vim/swap       " Directory to use for the swap file
-set backupdir=~/.vim/swap
 set diffopt=filler,iwhite       " In diff mode, ignore whitespace changes and align unchanged lines
 set history=1000                " Remember 1000 commands
 set scrolloff=3                 " Start scrolling 3 lines before the horizontal window border
 set visualbell t_vb=            " Disable error bells
-"set shortmess+=A                " Always edit file, even when swap file is found
+set shortmess+=A                " Always edit file, even when swap file is found
 set nobackup
 set nowritebackup
 
@@ -87,12 +86,19 @@ set modeline
 "   "500 : save up to 500 lines for each registeD
 "   :1000 : up to 1000 lines of command-line history will be remembered
 "   n... : where to save the viminfo files
-set viminfo=%100,'100,/100,h,\"500,:1000,n~/.vim/swap/viminfo
+set viminfo=%100,'100,/100,h,\"500,:1000,n~/.vim/.viminfo
 
 " ctags: recurse up to home to find tags. See
 " http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 " for an explanation and other ctags tips/tricks
 set tags+=tags;$HOME
+
+" Undo
+set undolevels=10000
+if has("persistent_undo")
+    set undodir=~/.vim/.undo        " Allow undoes to persist even after a file is closed
+    set undofile
+endif
 
 " Search settings
 set ignorecase
@@ -139,7 +145,6 @@ nmap <silent> <F3>      :set invwrap<CR>
 " TODO toggle numbers
 
 map <Leader>/ :nohlsearch<cr>
-
 map <Home> :tprev<CR>
 map <End>  :tnext<CR>
 
@@ -223,6 +228,9 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_regexp = 1
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
+"""""""""""""""""""""""""
+" Tabular
+"""""""""""""""""""""""""
 noremap \= :Tabularize /=<CR>
 noremap \: :Tabularize /^[^:]*:\zs/l0l1<CR>
 noremap \> :Tabularize /=><CR>

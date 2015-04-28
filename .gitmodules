@@ -8,11 +8,6 @@
 	url = git://github.com/tpope/vim-haml.git
 	branch = master
 	ignore = dirty
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = git://github.com/groenewege/vim-less.git
-	branch = master
-	ignore = dirty
 [submodule "bundle/vim-plist"]
 	path = bundle/vim-plist
 	url = git://github.com/Ihavee/vim-plist.git

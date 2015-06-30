@@ -10,6 +10,6 @@
 	ignore = dirty
 [submodule "bundle/vim-plist"]
 	path = bundle/vim-plist
-	url = git://github.com/Ihavee/vim-plist.git
+	url = git://github.com/iHavee/vim-plist.git
 	branch = master
 	ignore = dirty

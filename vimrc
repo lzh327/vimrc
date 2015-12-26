@@ -175,7 +175,18 @@ cmap w!! w !sudo tee % >/dev/null
 " Plugins
 """""""""""""""""""""""""
 
-" TODO Merge the NERDTreeFind with Toggle inteilligently.
+"""""""""""""""""""""""""
+" CSS3-Syntax
+"""""""""""""""""""""""""
+augroup VimCSS3Syntax
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
+augroup END
+
+
+"""""""""""""""""""""""""
+" NERDTree
+"""""""""""""""""""""""""
 nnoremap <C-n> :NERDTreeToggle<cr>
 
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
@@ -191,9 +202,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
-
-nnoremap <silent> <Leader>gd :Gdiff<CR>
-nnoremap <silent> <Leader>gb :Gblame<CR>
 
 " Put a space around comment markers
 let g:NERDSpaceDelims = 1

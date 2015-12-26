@@ -2,7 +2,7 @@
 "let g:templates_plugin_loaded = 1
 "let g:templates_no_autocmd = 1
 let g:username = "Havee"
-let g:email = "registerdedicated(at)yeah.net"
+let g:email = "registerdedicated(at)gmail.com"
 let g:license = "GPLv3"
 
 " Gist

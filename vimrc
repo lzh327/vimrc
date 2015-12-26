@@ -207,14 +207,6 @@ nnoremap <Leader>a :Ack
 " Put a space around comment markers
 let g:NERDSpaceDelims = 1
 
-map <Leader>l :MBEOpen<cr>
-let g:miniBufExplorerMoreThanOne = 10000
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplSplitBelow=1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplVSplit = 20
-
 let g:syntastic_enable_signs=1
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],

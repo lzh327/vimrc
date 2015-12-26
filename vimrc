@@ -195,15 +195,8 @@ autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 nnoremap <silent> <Leader>gd :Gdiff<CR>
 nnoremap <silent> <Leader>gb :Gblame<CR>
 
-nnoremap <Leader>a :Ack
-
 " Put a space around comment markers
 let g:NERDSpaceDelims = 1
-
-let g:syntastic_enable_signs=1
-let g:syntastic_mode_map = { 'mode': 'active',
-            \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['c', 'html', 'python', 'ruby', 'scss', 'scala'] }
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
@@ -226,14 +219,6 @@ if has("cscope")
     " Show msg when any other cscope db is added
     set cscopeverbose
 end
-
-"""""""""""""""""""""""""
-" Markdown
-"""""""""""""""""""""""""
-let g:vim_markdown_folding_disabled=1
-"let g:vim_markdown_initial_foldlevel=1
-let g:vim_markdown_math=1
-let g:vim_markdown_frontmatter=1
 
 """""""""""""""""""""""""
 " Local config

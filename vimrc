@@ -174,8 +174,6 @@ cmap w!! w !sudo tee % >/dev/null
 """""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""
-nnoremap <Leader>b :BufSurfBack<cr>
-nnoremap <Leader>f :BufSurfForward<cr>
 
 " TODO Merge the NERDTreeFind with Toggle inteilligently.
 nnoremap <C-n> :NERDTreeToggle<cr>

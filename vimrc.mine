@@ -43,7 +43,6 @@ let g:license = "GPLv3"
 " GitGutter
 """""""""""""""""""""""""
 let g:GitGutterEnable = 1
-let g:gitgutter_sign_column_always = 1
 let g:gitgutter_highlight_lines = 1
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :

@@ -28,7 +28,6 @@ If the result is 8, that means your Terminal was using 8 bit color (e.g. xterm o
 
 	$ echo "export TERM=xterm-256color" >> ~/.bashrc
 
-**Depends On curl for gist on this configration**
 
 Other Notes
 ------------

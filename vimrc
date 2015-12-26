@@ -187,14 +187,9 @@ let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
 
 "autocmd vimenter * NERDTree
-autocmd vimenter *
-            \ if !argc() |
-            \ NERDTree |
-            \ endif |
-autocmd bufenter *
-            \ if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") |
-            \ q |
-            \ endif |
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 
 nnoremap <silent> <Leader>gd :Gdiff<CR>

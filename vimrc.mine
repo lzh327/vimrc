@@ -5,3 +5,4 @@ let g:username = "Havee"
 let g:email = "registerdedicated(at)gmail.com"
 let g:license = "GPLv3"
 
+" vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :

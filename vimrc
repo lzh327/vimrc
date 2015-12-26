@@ -304,4 +304,4 @@ let g:vim_markdown_frontmatter=1
 """""""""""""""""""""""""
 silent! so ~/.vim/vimrc.mine
 
-" TODO raise contrast for comments
+" vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :

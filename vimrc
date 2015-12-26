@@ -230,16 +230,6 @@ noremap \\| :Tabularize /\|<CR>
 noremap \& :Tabularize /\(&\\|\\\\\)<CR>
 
 """""""""""""""""""""""""
-" Screen settings
-"""""""""""""""""""""""""
-let g:ScreenImpl = 'Tmux'
-let g:ScreenShellTmuxInitArgs = '-2'
-let g:ScreenShellInitialFocus = 'shell'
-let g:ScreenShellQuitOnVimExit = 0
-
-map <C-\> :ScreenShellVertical<CR>
-
-"""""""""""""""""""""""""
 " Ruby Stuff
 """""""""""""""""""""""""
 command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")

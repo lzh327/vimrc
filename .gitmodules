@@ -8,3 +8,8 @@
 	url = git://github.com/iHavee/vim-plist.git
 	branch = master
 	ignore = dirty
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+	branch = master
+	ignore = dirty

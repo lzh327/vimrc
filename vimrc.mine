@@ -19,7 +19,7 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
 
-"autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -33,10 +33,17 @@ let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 """""""""""""""""""""""""
 " template
 """""""""""""""""""""""""
-"let g:templates_plugin_loaded = 1
-"let g:templates_no_autocmd = 1
+" let g:templates_plugin_loaded = 1
+" let g:templates_no_autocmd = 1
 let g:username = "Havee"
 let g:email = "registerdedicated(at)gmail.com"
 let g:license = "GPLv3"
+
+"""""""""""""""""""""""""
+" GitGutter
+"""""""""""""""""""""""""
+let g:GitGutterEnable = 1
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_highlight_lines = 1
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :

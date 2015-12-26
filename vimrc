@@ -230,12 +230,6 @@ noremap \\| :Tabularize /\|<CR>
 noremap \& :Tabularize /\(&\\|\\\\\)<CR>
 
 """""""""""""""""""""""""
-" Tagbar
-"""""""""""""""""""""""""
-nnoremap <Leader>t :TagbarOpen fjc<CR>
-let g:TagbarShowTag = 1
-
-"""""""""""""""""""""""""
 " Screen settings
 """""""""""""""""""""""""
 let g:ScreenImpl = 'Tmux'

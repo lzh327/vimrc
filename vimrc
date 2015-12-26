@@ -38,8 +38,8 @@ set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
 " foldenable
 if exists("&foldenable") && v:version >= 700
     set foldenable
-    " set foldcolumn=2
-    set foldmethod=indent
+    "set foldcolumn=2
+    "set foldmethod=indent
     set foldlevel=1
 endif
 

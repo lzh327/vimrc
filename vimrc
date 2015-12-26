@@ -219,22 +219,6 @@ let g:ctrlp_regexp = 1
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
 """""""""""""""""""""""""
-" Ruby Stuff
-"""""""""""""""""""""""""
-command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
-map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
-map <Leader>w :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>
-map <Leader>, :w<CR> :call ScreenShellSend("\e[A")<CR>
-
-"""""""""""""""""""""""""
-" Python
-"""""""""""""""""""""""""
-autocmd FileType python setlocal et sta sw=4 sts=4
-let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
-let g:pydiction_menu_height = 10
-map <F5> :!python %<CR>
-
-"""""""""""""""""""""""""
 " Cscope
 """""""""""""""""""""""""
 if has("cscope")

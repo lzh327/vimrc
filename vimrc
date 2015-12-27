@@ -156,11 +156,10 @@ map <PageUp>   :lprev<CR>
 noremap K k
 
 " Resize window splits
-" TODO Fix mousewheel
-nnoremap <Up>    3<C-w>-
-nnoremap <Down>  3<C-w>+
-nnoremap <Left>  3<C-w><
-nnoremap <Right> 3<C-w>>
+nnoremap <C-k>    3<C-w>-
+nnoremap <C-j>    3<C-w>+
+nnoremap <C-h>    3<C-w><
+nnoremap <C-l>    3<C-w>>
 
 nnoremap _ :split<cr>
 nnoremap \| :vsplit<cr>

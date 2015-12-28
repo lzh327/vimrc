@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>vim-css3-syntax</title>
+
+    <link rel="stylesheet" href="http://hail2u.net/styles/natural.min.css">
+<style>
 .align {
   justify-self: safe;
   justify-content: true;
@@ -9,7 +19,8 @@
   display: space-between;
   display: space-evenly;
 }
-
+</style>
+<style>
 .animations {
   animation: forwards;
   animation-delay: backwards;
@@ -21,7 +32,8 @@
   animation-play-state: auto;
   animation-timing-function: auto;
 }
-
+</style>
+<style>
 .background {
   background-clip: space;
   background-origin: round;
@@ -39,7 +51,8 @@
   border-top-left-radius: auto;
   box-shadow: auto;
 }
-
+</style>
+<style>
 .box {
   overflow-style: scrollbar;
   overflow-x: panner;
@@ -53,24 +66,35 @@
   display: no-display;
   display: no-content;
 }
-
+</style>
+<style>
 .break {
   break-after: any;
   break-before: auto;
   break-inside: auto;
   box-decoration-break: auto;
 }
-
-.cascade {
-  all: unset;
+</style>
+<style>
+.cascade-3 {
+  all: initial;
+  display: unset;
 }
-
+</style>
+<style>
+@import "test.css" supports(display: auto);
+.cascade-4 {
+  display: revert;
+}
+</style>
+<style>
 .colors {
   opacity: rgba(0, 0, 0, 1);
   display: hsla(0, 0, 0, 1);
   display: currentColor;
 }
-
+</style>
+<style>
 @supports (display: auto) or
   (display: auto) not
   (display: auto) {
@@ -78,7 +102,8 @@
     display: auto;
   }
 }
-
+</style>
+<style>
 .compositing {
   mix-blend-mode: multiply;
   isolation: screen;
@@ -96,38 +121,90 @@
   display: color;
   display: luminosity;
 }
-
+</style>
+<style>
 .content {
   move-to: inhibit;
   page-policy: here;
   display: first;
   display: last;
 }
-
-.counter-styles {
-  negative: disclosure-open;
-  prefix: disclosure-closed;
-  suffix: simp-chinese-informal;
-  range: simp-chinese-formal;
-  pad: trad-chinese-informal;
-  fallback: trad-chinese-formal;
-  symbols: ethiopic-numeric;
-  additive-symbols: symbols("*" "\2020" "\2021" "\A7");
+</style>
+<style>
+@counter-style counter-style {
+  system: cyclic;
+  negative: symbolic;
+  prefix: additive;
+  suffix: extends;
+  range: bullets;
+  pad: numbers;
+  fallback: words;
+  symbols: symbols("*" "\2020" "\2021" "\A7");
+  additive-symbols: auto;
   speak-as: auto;
 }
-
-.display {
-  display-inside: block-level;
-  display-outside: inline-level;
-  display-extras: inline-list-item;
-  display-box: contents;
+</style>
+<style>
+.counter-style {
+  display: arabic-indic;
+  display: upper-armenian;
+  display: lower-armenian;
+  display: bengali;
+  display: cambodian;
+  display: khmer;
+  display: cjk-decimal;
+  display: devanagari;
+  display: gujarati;
+  display: gurmukhi;
+  display: kannada;
+  display: lao;
+  display: malayalam;
+  display: mongolian;
+  display: myanmar;
+  display: oriya;
+  display: persian;
+  display: tamil;
+  display: telugu;
+  display: thai;
+  display: tibetan;
+  display: cjk-earthly-branch;
+  display: cjk-heavenly-stem;
+  display: disclosure-closed;
+  display: disclosure-open;
+  display: japanese-informal;
+  display: japanese-formal;
+  display: korean-hangul-formal;
+  display: korean-hanja-informal;
+  display: korean-hanja-formal;
+  display: simp-chinese-informal;
+  display: simp-chinese-formal;
+  display: trad-chinese-informal;
+  display: trad-chinese-formal;
+  display: ethiopic-numeric;
 }
-
+</style>
+<style>
+.cssom-view {
+  scroll-behavior: instant;
+  display: smooth;
+}
+</style>
+<style>
+.display {
+  box-suppress: flow;
+  display: flow-root;
+  display: contents;
+  display: inline-list-item;
+  display: discard;
+}
+</style>
+<style>
 .exclusions {
   wrap-flow: minimum;
   wrap-through: maximum;
 }
-
+</style>
+<style>
 .flexbox {
   flex-direction: flex;
   flex-wrap: inline-flex;
@@ -136,9 +213,10 @@
   flex: column-reverse;
   flex-grow: wrap;
   flex-shrink: wrap-reverse;
-  flex-basis: auto;
+  flex-basis: main-size;
 }
-
+</style>
+<style>
 .fonts {
   font-feature-settings: common-ligatures;
   font-kerning: no-common-ligatures;
@@ -176,7 +254,8 @@
   display: traditional;
   display: proportional-width;
 }
-
+</style>
+<style>
 .gcpm::footnote-call,
 .gcpm::footnote-marker {
   string-set: string(heading, first);
@@ -191,36 +270,31 @@
   display: open;
   display: closed;
 }
-
-.grid-layout {
+</style>
+<style>
+.grid {
   grid-template-columns: grid;
   grid-template-rows: inline-grid;
   grid-template-areas: minmax(0, 1);
   grid-template: repeat(4);
   grid-auto-columns: 0.2fr;
   grid-auto-rows: subgrid;
-  grid-auto-flow: rows;
-  grid-auto-position: columns;
-  grid: dense;
-  grid-row-start: span;
+  grid-auto-flow: dense;
+  grid-auto-position: span;
+  grid: auto;
+  grid-row-start: auto;
   grid-column-start: auto;
   grid-row-end: auto;
   grid-column-end: auto;
   grid-column: auto;
   grid-row: auto;
   grid-area: auto;
+  grid-column-gap: auto;
+  grid-row-gap: auto;
+  grid-gap: auto;
 }
-
-.hyperlinks {
-  target: current;
-  target-name: new;
-  target-new: modal;
-  target-position: window;
-  display: tab;
-  display: front;
-  display: back;
-}
-
+</style>
+<style>
 .images {
   object-fit: contain;
   object-position: cover;
@@ -233,57 +307,32 @@
   display: repeating-linear-gradient(to bottom, yellow, blue);
   display: repeating-radial-gradient(farthest-corner at 50% 50%, yellow, green);
 }
-
-.layout::slot(b) {
-  display: same;
+</style>
+<style>
+.inline {
+  dominant-baseline: mathematical;
+  alignment-baseline: ideographic;
+  baseline-shift: auto;
+  initial-letter: auto;
+  initial-letter-align: auto;
+  initial-letter-wrap: auto;
 }
-
+</style>
+<style>
 .line-grid {
   line-grid: create;
-  line-snap: half-border;
-  line-slack: rounddown(1em);
-  box-snap: roundup(1em);
-  display: 10gd;
+  line-snap: block-start;
+  box-snap: block-end;
+  display: first-baseline;
+  display: last-baseline;
 }
-
-.linebox {
-  alignment-adjust: central;
-  alignment-baseline: mathematical;
-  baseline-shift: before-edge;
-  dominate-baseline: after-edge;
-  drop-initial-after-adjust: text-before-edge;
-  drop-initial-after-align: text-after-edge;
-  drop-initial-before-adjust: use-script;
-  drop-initial-before-align: caps-height;
-  drop-initial-size: exclude-ruby;
-  drop-initial-value: include-ruby;
-  inline-box-align: consider-shift;
-  line-stacking: disregard-shift;
-  line-stacking-ruby: inline-line-height;
-  line-stacking-shift: block-line-height;
-  line-stacking-strategy: max-height;
-  text-height: grid-height;
-  display: font-size;
-  display: text-size;
-  display: max-size;
-}
-
+</style>
+<style>
 .lists::marker {
-  marker-side: marker;
-  counter-set: list-container;
-  display: counters(list-item, '.');
+  display: auto;
 }
-
-.marquee {
-  marquee-direction: forward;
-  marquee-play-count: reverse;
-  marquee-speed: infinite;
-  marquee-style: slide;
-  display: alternate;
-  display: marquee-line;
-  display: marquee-block;
-}
-
+</style>
+<style>
 .masking {
   clip-path: fill-box;
   clip-rule: stroke-box;
@@ -305,7 +354,8 @@
   mask-border: auto;
   mask-type: auto;
 }
-
+</style>
+<style>
 .multicol {
   columns: column;
   column-count: balance;
@@ -318,7 +368,8 @@
   column-span: auto;
   column-width: auto;
 }
-
+</style>
+<style>
 .overflow {
   max-lines: paged-x;
   display: paged-y;
@@ -326,18 +377,42 @@
   display: paged-y-controls;
   display: fragments;
 }
-
+</style>
+<style>
 .page {
   display: avoid-page;
   display: page;
   display: recto;
   display: verso;
 }
-
-.preslev {
-  presentation-level: increment;
+</style>
+<style>
+.page-floats-3 {
+  float-reference: inline-start;
+  float-defer: inline-end;
+  float-offset: snap-block;
+  display: snap-inline;
+  display: snap-block(2em, near);
+  display: snap-inline(2em, near);
 }
-
+</style>
+<style>
+.positioning {
+  offset-before: sticky;
+  offset-end: auto;
+  offset-after: auto;
+  offset-start: auto;
+}
+</style>
+<style>
+.pseudo::selection,
+.pseudo::spelling-error,
+.pseudo::grammer-error,
+.pseuod::placeholder {
+  display: block;
+}
+</style>
+<style>
 .regions:region {
   flow-into: element;
   flow-from: content;
@@ -345,19 +420,32 @@
   display: region;
   display: avoid-region;
 }
-
+</style>
+<style>
+@media (device-radius: 50%) {
+  .round-display-1 {
+    shape-inside: outside-shape;
+    border-boundary: shape-box;
+    polar-angle: parent;
+    polar-distance: polar;
+  }
+}
+</style>
+<style>
 .ruby {
+  ruby-position: ruby-base-container;
   ruby-merge: ruby-text-container;
   ruby-align: inter-character;
-  ruby-position: ruby-base-container;
 }
-
+</style>
+<style>
 @scope .scoping {
   div {
     display: auto;
   }
 }
-
+</style>
+<style>
 .scoping:scope-context div,
 .scoping:host,
 .scping:host(.foo),
@@ -367,7 +455,8 @@
 .scoping /deep/ span {
   display: auto;
 }
-
+</style>
+<style>
 .selectors3:target,
 .selectors3:enabled,
 .selectors3:disabled,
@@ -387,7 +476,8 @@
 .selectors3:not([DISABLED]) {
   display: auto;
 }
-
+</style>
+<style>
 .selectors4 | h1,
 .selectors4:scope,
 .selectors4:current,
@@ -410,7 +500,7 @@
 .selectors4:active-drop-target,
 .selectors4:valid-drop-target,
 .selectors4:invalid-drop-target,
-.selectors3:matches(:hover, :focus),
+.selectors4:matches(:hover, :focus),
 .selectors4:dir(ltr),
 .selectors4:local-link(0),
 .selectors4:current(p, li, dt, dd),
@@ -421,7 +511,8 @@
 .selectors4:column(p, li, dt, dd) {
   display: auto;
 }
-
+</style>
+<style>
 .shapes {
   shape-outside: margin-box;
   shape-image-threshold: inset(50% 50% 50% 50%);
@@ -429,7 +520,8 @@
   display: ellipse(0 0 250px 100px);
   display: polygon(0 0, 100% 100%, 0 100%);
 }
-
+</style>
+<style>
 .sizing {
   display: max-content;
   display: fit-content;
@@ -437,7 +529,17 @@
   display: repudiate-floats;
   display: contain-floats;
 }
-
+</style>
+<style>
+.snappoints {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: proximity;
+  scroll-snap-points-y: auto;
+  scroll-snap-destination: auto;
+  scroll-snap-coordinate: auto;
+}
+</style>
+<style>
 .speech {
   voice-volume: 10dB;
   voice-balance: literal-punctuation;
@@ -454,8 +556,9 @@
   display: moderate;
   display: reduced;
 }
-
-.text {
+</style>
+<style>
+.text-3 {
   hyphens: manual;
   line-break: loose;
   overflow-wrap: strict;
@@ -464,7 +567,34 @@
   display: each-line;
   display: full-width;
 }
-
+</style>
+<style>
+.text-4 {
+  text-space-collapse: preserve-auto;
+  text-space-trim: preserve-trim;
+  text-wrap: preserve-breaks;
+  wrap-before: preserve-spaces;
+  wrap-after: trim-inner;
+  wrap-inside: discard-before;
+  hyphenate-character: discard-after;
+  hyphenate-limit-zone: avoid-line;
+  hyphenate-limit-chars: avoid-flex;
+  hyphenate-limit-lines: pre-wrap-auto;
+  hyphenate-limit-last: no-limit;
+  text-spacing: spread;
+  display: trim-start;
+  display: space-start;
+  display: trim-end;
+  display: space-end;
+  display: trim-adjacent;
+  display: space-adjacent;
+  display: no-compress;
+  display: ideograph-alpha;
+  display: ideograph-numeric;
+  display: punctuation;
+}
+</style>
+<style>
 .text-decor-3 {
   text-decoration-color: filled;
   text-decoration-line: dot;
@@ -480,7 +610,8 @@
   display: under;
   display: over;
 }
-
+</style>
+<style>
 .transforms {
   backface-visibility: flat;
   perspective: preserve-3d;
@@ -506,7 +637,8 @@
   display: skewY(1);
   display: perspective(1);
 }
-
+</style>
+<style>
 .transitions {
   transition: linear;
   transition-property: ease;
@@ -518,60 +650,60 @@
   display: steps(1, start);
   display: cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
-
-.ui {
-  icon: active;
-  resize: inactive;
-  box-sizing: disabled;
-  ime-mode: root;
-  nav-index: horizontal;
-  nav-up: vertical;
-  nav-right: clip;
-  nav-down: ellipsis;
-  nav-left: auto;
-  outline-offset: auto;
+</style>
+<style>
+.ui-3 {
+  caret-color: grab;
+  display: grabbing;
 }
-
+</style>
+<style>
+.ui-4 {
+  caret: fade;
+  caret-shape: fade(1em);
+  caret-animation: underscore;
+}
+</style>
+<style>
 .values {
   display: 1ch;
-  display: 1rem;
   display: 1vw;
   display: 1vh;
   display: 1vmin;
+  display: 1q;
   display: 1turn;
-  display: 1dpi;
-  display: 1dpcm;
-  display: 1dppx;
   display: calc(100%/3 - 2*1em - 2*1px);
   display: toggle(italic, normal);
-  display: initial;
 }
-
+</style>
+<style>
 .variables {
   var-foo: var(foo);
 }
-
+</style>
+<style>
 .will-change {
   will-change: scroll-position;
 }
-
+</style>
+<style>
 .writing-modes {
-  text-orientation: before;
-  text-combine-horizontal: after;
-  writing-mode: isolate;
-  display: isolate;
+  writing-mode: before;
+  text-orientation: after;
+  text-combine-upright: mixed;
+  glyph-orientation-vertical: upright;
   display: plaintext;
-  display: mixed;
-  display: upright;
   display: sideways;
-  display: sideways-right;
-  display: sideways-left;
-  display: use-glyph-orientation;
+  display: sideways-rl;
+  display: sideways-lr;
+  display: isolate;
+  display: isolate-override;
   display: horizontal-tb;
   display: vertical-rl;
   display: vertical-lr;
 }
-
+</style>
+<style>
 .html5-elements,
 article,
 section,
@@ -606,3 +738,11 @@ template,
 canvas {
   display: auto;
 }
+</style>
+  </head>
+  <body>
+    <header>
+      <h1>vim-css3-syntax</h1>
+    </header>
+  </body>
+</html>

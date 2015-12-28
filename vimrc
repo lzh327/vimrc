@@ -1,11 +1,8 @@
 """""""""""""""""""""""""
-" Basic features
+" pathogen.vim
 """""""""""""""""""""""""
-let pathogen_disabled = []
-if !has('gui_running')
-    call add(g:pathogen_disabled, 'css-color')
-endif
-silent! call pathogen#infect()
+silent! execute pathogen#infect()
+silent! set sessionoptions-=options
 
 " Display options
 syntax on

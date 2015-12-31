@@ -7,7 +7,7 @@ silent! set sessionoptions-=options
 " Display options
 syntax on
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set number
 set list!                       " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«

@@ -13,11 +13,6 @@
 	url = git://github.com/airblade/vim-gitgutter.git
 	branch = master
 	ignore = dirty
-[submodule "bundle/vim-monokai"]
-	path = bundle/vim-monokai
-	url = git://github.com/sickill/vim-monokai.git
-	branch = master
-	ignore = dirty
 [submodule "bundle/vim-template"]
 	path = bundle/vim-template
 	url = git://github.com/aperezdc/vim-template.git

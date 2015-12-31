@@ -28,3 +28,8 @@
 	url = git://github.com/scrooloose/nerdtree.git
 	branch = master
 	ignore = dirty
+[submodule "bundle/vim-css3-syntax"]
+	path = bundle/vim-css3-syntax
+	url = git://github.com/hail2u/vim-css3-syntax.git
+	branch = master
+	ignore = dirty

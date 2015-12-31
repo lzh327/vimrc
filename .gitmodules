@@ -43,3 +43,8 @@
 	url = git://github.com/ervandew/supertab.git
 	branch = master
 	ignore = dirty
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/plasticboy/vim-markdown.git
+	branch = master
+	ignore = dirty

@@ -199,7 +199,6 @@ augroup END
 " NERDTree
 """""""""""""""""""""""""
 nnoremap <C-n> :NERDTreeToggle<cr>
-
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
             \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
             \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.img',
@@ -207,17 +206,11 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
-
 " autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
-
-" Put a space around comment markers
-let g:NERDSpaceDelims = 1
-
-let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
 """""""""""""""""""""""""
 " template

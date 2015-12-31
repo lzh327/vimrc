@@ -38,3 +38,8 @@
 	url = git://github.com/registe/vim-monokai.git
 	branch = master
 	ignore = dirty
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+	branch = master
+	ignore = dirty

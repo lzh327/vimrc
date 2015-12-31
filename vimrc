@@ -222,6 +222,11 @@ let g:email = "registerdedicated(at)gmail.com"
 let g:license = "GPLv3"
 
 """""""""""""""""""""""""
+" Supertab
+"""""""""""""""""""""""""
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+"""""""""""""""""""""""""
 " GitGutter
 """""""""""""""""""""""""
 let g:GitGutterEnable = 1

@@ -7,6 +7,7 @@ silent! set sessionoptions-=options
 " Display options
 syntax on
 set cursorline
+set cursorcolumn
 set number
 set list!                       " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
@@ -30,14 +31,6 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
-
-" foldenable
-"if exists("&foldenable") && v:version >= 700
-"    set foldenable
-"    set foldcolumn=2
-"    set foldmethod=indent
-"    set foldlevel=1
-"endif
 
 " Misc
 filetype plugin indent on       " Do filetype detection and load custom file plugins and indent files
@@ -83,11 +76,6 @@ set modeline
 "   :1000 : up to 1000 lines of command-line history will be remembered
 "   n... : where to save the viminfo files
 set viminfo=%100,'100,/100,h,\"500,:1000,n~/.vim/swap/viminfo
-
-" ctags: recurse up to home to find tags. See
-" http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
-" for an explanation and other ctags tips/tricks
-"set tags+=tags;$HOME
 
 " Undo
 set undolevels=10000

@@ -19,7 +19,7 @@ if has("gui_macvim")
 
     " theme
     try
-        colorscheme monokai
+        colorscheme monokai-light
     catch
         colorscheme default
     endtry

@@ -12,13 +12,12 @@ set list!                       " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 " color
-if $TERM =~ '^xterm' || $TERM =~ '^screen' || $TERM=~ '256color$' || has('gui_running')
-    try
-        colorscheme monokai
-    catch
-        colorscheme default
-    endtry
-endif
+try
+    set t_Co=256
+    colorscheme monokai
+catch
+    colorscheme default
+endtry
 
 " Statusline
 if has("statusline")
@@ -33,12 +32,12 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
 
 " foldenable
-if exists("&foldenable") && v:version >= 700
-    set foldenable
-    "set foldcolumn=2
-    "set foldmethod=indent
-    set foldlevel=1
-endif
+"if exists("&foldenable") && v:version >= 700
+"    set foldenable
+"    set foldcolumn=2
+"    set foldmethod=indent
+"    set foldlevel=1
+"endif
 
 " Misc
 filetype plugin indent on       " Do filetype detection and load custom file plugins and indent files
@@ -88,7 +87,7 @@ set viminfo=%100,'100,/100,h,\"500,:1000,n~/.vim/swap/viminfo
 " ctags: recurse up to home to find tags. See
 " http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 " for an explanation and other ctags tips/tricks
-set tags+=tags;$HOME
+"set tags+=tags;$HOME
 
 " Undo
 set undolevels=10000
@@ -217,7 +216,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 """""""""""""""""""""""""
 " let g:templates_plugin_loaded = 1
 " let g:templates_no_autocmd = 1
-let g:username = "Havee"
+let g:username = "Register"
 let g:email = "registerdedicated(at)gmail.com"
 let g:license = "GPLv3"
 
@@ -230,7 +229,6 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " GitGutter
 """""""""""""""""""""""""
 let g:GitGutterEnable = 1
-let g:gitgutter_highlight_lines = 1
 
 """""""""""""""""""""""""
 " Local config

@@ -33,3 +33,8 @@
 	url = git://github.com/hail2u/vim-css3-syntax.git
 	branch = master
 	ignore = dirty
+[submodule "bundle/modeliner"]
+	path = bundle/modeliner
+	url = git://github.com/vim-scripts/Modeliner.git
+	branch = master
+	ignore = dirty

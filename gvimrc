@@ -6,23 +6,24 @@ set visualbell t_vb=
 
 autocmd VimEnter * set vb t_vb=
 set gcr = n:blinkon0
-set lines=70 columns=150
+set lines=70 columns=130
 
 map <F1> :set guifont=Monospace\ 9<CR>
 map <F2> :set guifont=Monospace\ 14<CR>
 
+" theme
+try
+    colorscheme monokai-light
+catch
+    colorscheme default
+endtry
+
+" macvim
 if has("gui_macvim")
     set guifont = Monaco:h10
 
     " Fullscreen takes up entire screen
     set fuoptions = maxhorz,maxvert
-
-    " theme
-    try
-        colorscheme monokai-light
-    catch
-        colorscheme default
-    endtry
 
     " Command-Return for fullscreen
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>

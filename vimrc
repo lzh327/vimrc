@@ -80,8 +80,10 @@ set viminfo=%100,'100,/100,h,\"500,:1000,n~/.vim/swap/viminfo
 " Undo
 set undolevels=10000
 if has("persistent_undo")
-    set undodir=~/.vim/.undo        " Allow undoes to persist even after a file is closed
+    set undodir=$HOME/.vim/.undo        " Allow undoes to persist even after a file is closed
     set undofile
+    set undolevels=1000
+    set undoreload=10000
 endif
 
 " Search settings

@@ -1,2 +1,8 @@
 .swap/*
-!.swap/.keep
+!.swap/.gitkeep
+
+# Mac
+.DS_Store
+.Spotlight-v100
+*.pyc
+*~

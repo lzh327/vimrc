@@ -29,4 +29,4 @@ if has("gui_macvim")
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 endif
 
-silent! so ~/.vim/gvimrc.mine
+silent! so $HOME/.vim/gvimrc.mine

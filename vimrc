@@ -40,7 +40,7 @@ set wildmode=list:longest,full  " Complete longest common match and show possibl
 set backspace=eol,start,indent  " Allow backspacing over indent, eol, & start
 set complete=.,w,b,u,U,t,i,d    " Do lots of scanning on tab completion
 set updatecount=100             " Write swap file to disk every 100 chars
-set directory=~/.vim/.swap       " Directory to use for the swap file
+set directory=$HOME/.vim/.swap       " Directory to use for the swap file
 set diffopt=filler,iwhite       " In diff mode, ignore whitespace changes and align unchanged lines
 set history=1000                " Remember 1000 commands
 set scrolloff=3                 " Start scrolling 3 lines before the horizontal window border
@@ -76,7 +76,7 @@ set modeline
 "   "500 : save up to 500 lines for each registeD
 "   :1000 : up to 1000 lines of command-line history will be remembered
 "   n... : where to save the viminfo files
-set viminfo=%100,'100,/100,h,\"500,:1000,n~/.vim/.swap/viminfo
+set viminfo=%100,'100,/100,h,\"500,:1000,n$HOME/.vim/.swap/viminfo
 
 " Undo
 set undolevels=10000
@@ -232,6 +232,6 @@ let g:vim_markdown_frontmatter=1
 """""""""""""""""""""""""
 " Local config
 """""""""""""""""""""""""
-silent! so ~/.vim/vimrc.mine
+silent! so $HOME/.vim/vimrc.mine
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :

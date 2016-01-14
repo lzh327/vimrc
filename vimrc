@@ -48,7 +48,7 @@ set visualbell t_vb=            " Disable error bells
 set shortmess+=A                " Always edit file, even when swap file is found
 set nobackup
 set nowritebackup
-set mouse=a                     " mouse wheel in xterm
+"set mouse=a                     " mouse wheel in xterm
 
 " up/down on displayed lines, not real lines. More useful than painful.
 noremap k gk

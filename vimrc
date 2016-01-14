@@ -84,7 +84,6 @@ set undolevels=10000
 if has("persistent_undo")
     set undodir=$HOME/.vim/.swap
     set undofile
-    set undolevels=1000
     set undoreload=10000
 endif
 

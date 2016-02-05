@@ -1,3 +1,25 @@
+set nocompatible                " be iMproved, required
+filetype off                    " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'iHavee/vim-monokai'
+Plugin 'vim-scripts/Modeliner'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'aperezdc/vim-template'
+
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()               " required
+
+
 
 " Display options
 syntax on

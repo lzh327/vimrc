@@ -1,5 +1,7 @@
 .swap/*
 !.swap/.gitkeep
+bundle/*
+!bundle/Vundle.vim
 
 # Mac
 .DS_Store

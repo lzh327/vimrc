@@ -3,17 +3,13 @@ Installation
 
 To install, run
 
-	git clone git://gitcafe.com/Havee/vimrc.git ~/.vim
+	git clone git://github.com/iHavee/vimrc.git ~/.vim
 	cd ~/.vim
 	make install
 
 To update the repository, run
 
 	make update
-
-or
-
-	git init; git submodule update --init
 
 Note
 -----

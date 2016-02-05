@@ -6,7 +6,7 @@ set visualbell t_vb=
 
 autocmd VimEnter * set vb t_vb=
 set gcr = n:blinkon0
-set lines=70 columns=130
+set lines=50 columns=120
 
 map <F1> :set guifont=Monospace\ 9<CR>
 map <F2> :set guifont=Monospace\ 14<CR>
@@ -20,7 +20,7 @@ endtry
 
 " macvim
 if has("gui_macvim")
-    set guifont = Monaco:h10
+    set guifont=Monaco:h14
 
     " Fullscreen takes up entire screen
     set fuoptions = maxhorz,maxvert

@@ -1,3 +1,5 @@
 [submodule "vundle/Vundle.vim"]
 	path = vundle/Vundle.vim
 	url = git://github.com/VundleVim/Vundle.vim.git
+	branch = master
+	ignore = dirty

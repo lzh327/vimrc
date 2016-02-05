@@ -1,3 +1,6 @@
+"""""""""""""""""""""""""
+" vundle
+"""""""""""""""""""""""""
 set nocompatible                " be iMproved, required
 filetype off                    " required
 
@@ -13,11 +16,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'aperezdc/vim-template'
-Plugin 'iHavee/vim-plist'
 
-
-" All of your Plugins must be added before the following line
 call vundle#end()               " required
+
+"""""""""""""""""""""""""
+" global
+"""""""""""""""""""""""""
 
 " Display options
 syntax on

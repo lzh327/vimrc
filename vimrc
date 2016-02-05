@@ -1,8 +1,3 @@
-"""""""""""""""""""""""""
-" pathogen.vim
-"""""""""""""""""""""""""
-silent! execute pathogen#infect()
-silent! set sessionoptions-=options
 
 " Display options
 syntax on

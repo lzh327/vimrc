@@ -1,15 +1,14 @@
 """""""""""""""""""""""""
 " vundle
 """""""""""""""""""""""""
-set nocompatible                " be iMproved, required
-filetype off                    " required
+set nocompatible                    " be iMproved, required
+filetype off                        " required
 
-set rtp+=~/.vim/vundle/Vundle.vim
+set rtp+=~/.vim/vundle/Vundle.vim   " submodule
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'Modeliner'                  "vim-scripts
 
 Plugin 'iHavee/vim-monokai'
-Plugin 'vim-scripts/Modeliner'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
@@ -17,7 +16,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'aperezdc/vim-template'
 
-call vundle#end()               " required
+call vundle#end()                   " required
 
 """""""""""""""""""""""""
 " global
@@ -28,7 +27,7 @@ syntax on
 set cursorline
 "set cursorcolumn
 set number
-set list!                       " Display unprintable characters
+set list!                           " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 " color
@@ -52,22 +51,22 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
 
 " Misc
-filetype plugin indent on       " Do filetype detection and load custom file plugins and indent files
-set hidden                      " Don't abandon buffers moved to the background
-set wildmenu                    " Enhanced completion hints in command line
-set wildmode=list:longest,full  " Complete longest common match and show possible matches and wildmenu
-set backspace=eol,start,indent  " Allow backspacing over indent, eol, & start
-set complete=.,w,b,u,U,t,i,d    " Do lots of scanning on tab completion
-set updatecount=100             " Write swap file to disk every 100 chars
-set directory=$HOME/.vim/.swap       " Directory to use for the swap file
-set diffopt=filler,iwhite       " In diff mode, ignore whitespace changes and align unchanged lines
-set history=1000                " Remember 1000 commands
-set scrolloff=3                 " Start scrolling 3 lines before the horizontal window border
-set visualbell t_vb=            " Disable error bells
-set shortmess+=A                " Always edit file, even when swap file is found
+filetype plugin indent on           " Do filetype detection and load custom file plugins and indent files
+set hidden                          " Don't abandon buffers moved to the background
+set wildmenu                        " Enhanced completion hints in command line
+set wildmode=list:longest,full      " Complete longest common match and show possible matches and wildmenu
+set backspace=eol,start,indent      " Allow backspacing over indent, eol, & start
+set complete=.,w,b,u,U,t,i,d        " Do lots of scanning on tab completion
+set updatecount=100                 " Write swap file to disk every 100 chars
+set directory=$HOME/.vim/.swap      " Directory to use for the swap file
+set diffopt=filler,iwhite           " In diff mode, ignore whitespace changes and align unchanged lines
+set history=1000                    " Remember 1000 commands
+set scrolloff=3                     " Start scrolling 3 lines before the horizontal window border
+set visualbell t_vb=                " Disable error bells
+set shortmess+=A                    "Always Always edit file, even when swap file is found
 set nobackup
 set nowritebackup
-"set mouse=a                     " mouse wheel in xterm
+"set mouse=a                        " mouse wheel in xterm
 
 " up/down on displayed lines, not real lines. More useful than painful.
 noremap k gk
@@ -76,7 +75,7 @@ noremap j gj
 " Formatting, indentation and tabbing
 "set autoindent
 set autoindent smartindent
-set smarttab                    " Make <tab> and <backspace> smarter
+set smarttab                        " Make <tab> and <backspace> smarter
 set expandtab
 "set noexpandtab
 set tabstop=4

@@ -1,6 +1,5 @@
 .swap/*
 bundle/*
-!.swap/.gitkeep
 
 # Mac
 .DS_Store

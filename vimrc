@@ -1,10 +1,13 @@
+" create needed folder
+call system("mkdir -p $HOME/.vim/.swap")
+
 """""""""""""""""""""""""
 " vundle
 """""""""""""""""""""""""
 set nocompatible                    " be iMproved, required
 filetype off                        " required
 
-set rtp+=~/.vim/vundle/Vundle.vim   " submodule
+set rtp+=$HOME/.vim/vundle/Vundle.vim   " submodule
 call vundle#begin()
 Plugin 'Modeliner'                  "vim-scripts
 

@@ -13,13 +13,13 @@ set rtp+=$HOME/.vim/vundle/Vundle.vim   " submodule
 call vundle#begin()
 Plugin 'Modeliner'                  "vim-scripts
 
-Plugin 'iHavee/vim-monokai'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'aperezdc/vim-template'
+Plugin 'iHavee/vim-monokai', {'name': 'monokai'}
+Plugin 'airblade/vim-gitgutter', {'name': 'gitgutter'}
+Plugin 'hail2u/vim-css3-syntax', {'name': 'css3-syntax'}
+Plugin 'plasticboy/vim-markdown', {'name': 'markdown'}
+Plugin 'aperezdc/vim-template', {'name': 'template'}
 
 call vundle#end()                   " required
 

@@ -27,7 +27,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall | PlugInstall | so $HOME/.vimrc
 endif
 
-call plug#begin()
+call plug#begin('$HOME/.vim/bundle')
 
 Plug 'Modeliner'                  "vim-scripts
 Plug 'ervandew/supertab', {'tag': '2.1'}

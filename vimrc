@@ -2,30 +2,30 @@
 call system("mkdir -p $HOME/.vim/.swap")
 
 """""""""""""""""""""""""
-" vundle
+" vim-plug
 """""""""""""""""""""""""
-"if &compatible                      " be iMproved, required
-"    set nocompatible
-"endif
-"filetype off                        " required
+if &compatible                      " be iMproved, required
+    set nocompatible
+endif
 
-"set rtp+=$HOME/.vim/vundle/Vundle.vim   " submodule
-"call vundle#begin()
-"Plugin 'VundleVim/Vundle.vim', {'rtp': '../vundle/'}
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall | source $HOME/.vimrc
+endif
 
 call plug#begin()
-Plug 'Modeliner'                  "vim-scripts
 
-Plug 'ervandew/supertab'
-Plug 'scrooloose/nerdtree'
+Plug 'Modeliner'                  "vim-scripts
+Plug 'ervandew/supertab', {'tag': '2.1'}
+Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'iHavee/vim-monokai', {'as': 'monokai'}
 Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
-Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax'}
+Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax', 'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown', {'as': 'markdown', 'tag': '2.0.0'}
 Plug 'aperezdc/vim-template', {'as': 'template'}
 
 call plug#end()
-"call vundle#end()                   " required
 
 """""""""""""""""""""""""
 " global
@@ -53,12 +53,6 @@ if has("statusline")
     set laststatus=2
 endif
 
-" Encoding
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
-
 " Misc
 filetype plugin indent on           " Do filetype detection and load custom file plugins and indent files
 set hidden                          " Don't abandon buffers moved to the background
@@ -75,7 +69,14 @@ set visualbell t_vb=                " Disable error bells
 set shortmess+=A                    "Always Always edit file, even when swap file is found
 set nobackup
 set nowritebackup
+set modifiable
 " set mouse=a                       " mouse wheel in xterm
+
+" Encoding
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
 
 " up/down on displayed lines, not real lines. More useful than painful.
 noremap k gk

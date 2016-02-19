@@ -35,7 +35,7 @@ Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'sickill/vim-monokai', {'as': 'monokai'}
 Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
 Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax', 'tag': 'v0.17.0'}
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', {'as' : 'markdown'}
 Plug 'aperezdc/vim-template', {'as': 'template'}
 
 call plug#end()

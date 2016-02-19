@@ -1,15 +1,16 @@
+simple/weight vim's configration with [vim-plug](https://github.com/junegunn/vim-plug)
+
 Installation
 ------------
 
 To install, run
 
-	git clone git://github.com/iHavee/vimrc.git ~/.vim
-	cd ~/.vim
-	make install
+    git clone git://github.com/iHavee/vimrc.git ~/.vim
+    cd ~/.vim && make install
 
 To update the repository, run
 
-	make update
+    make update
 
 Note
 -----
@@ -18,11 +19,11 @@ If you are going to use this colorscheme of the configuration in Terminal mode (
 
 Test the terminals color bit depth:
 
-	$ tput colors
+    $ tput colors
 
 If the result is 8, that means your Terminal was using 8 bit color (e.g. xterm on Gentoo), please:
 
-	$ echo "export TERM=xterm-256color" >> ~/.bashrc
+    $ echo "export TERM=xterm-256color" >> ~/.bashrc
 
 
 Other Notes

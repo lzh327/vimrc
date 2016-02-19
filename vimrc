@@ -6,6 +6,17 @@ if &compatible
     set nocompatible
 endif
 
+" viminfo: remember certain things when we exit
+" (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
+"   %    : saves and restores the buffer list
+"   '100 : marks will be remembered for up to 30 previously edited files
+"   /100 : save 100 lines from search history
+"   h    : disable hlsearch on start
+"   "500 : save up to 500 lines for each registeD
+"   :1000 : up to 1000 lines of command-line history will be remembered
+"   n... : where to save the viminfo files
+set viminfo=%100,'100,/100,h,\"500,:1000,n$HOME/.vim/.swap/viminfo
+
 """""""""""""""""""""""""
 " vim-plug
 """""""""""""""""""""""""
@@ -96,17 +107,6 @@ set shiftwidth=4
 set textwidth=80
 set formatoptions-=t formatoptions+=croql
 set modeline
-
-" viminfo: remember certain things when we exit
-" (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
-"   %    : saves and restores the buffer list
-"   '100 : marks will be remembered for up to 30 previously edited files
-"   /100 : save 100 lines from search history
-"   h    : disable hlsearch on start
-"   "500 : save up to 500 lines for each registeD
-"   :1000 : up to 1000 lines of command-line history will be remembered
-"   n... : where to save the viminfo files
-set viminfo=%100,'100,/100,h,\"500,:1000,n$HOME/.vim/.swap/viminfo
 
 " Undo
 set undolevels=10000

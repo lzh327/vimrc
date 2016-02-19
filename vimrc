@@ -1,17 +1,19 @@
 " create needed folder
 call system("mkdir -p $HOME/.vim/.swap")
 
+" be iMproved, required
+if &compatible
+    set nocompatible
+endif
+
 """""""""""""""""""""""""
 " vim-plug
 """""""""""""""""""""""""
-if &compatible                      " be iMproved, required
-    set nocompatible
-endif
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall | source $HOME/.vimrc
+    autocmd VimEnter * PlugInstall | PlugInstall | so $HOME/.vimrc
 endif
 
 call plug#begin()

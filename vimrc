@@ -1,5 +1,5 @@
 " create needed folder
-call system("mkdir -p $HOME/.vim/.swap")
+silent !mkdir -p $HOME/.vim/.swap
 
 " be iMproved, required
 if &compatible

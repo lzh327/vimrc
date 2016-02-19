@@ -29,5 +29,4 @@ Other Notes
 ------------
 
 vimrc.mine and gvimrc.mine contain system-specific settings or other settings
-that should not be part of a general configuration. Thus, they are not tracked
-in the repo. My vimrc.mine and gvim.mine are included as examples.
+that should not be part of a general configuration.

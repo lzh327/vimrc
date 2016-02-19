@@ -32,10 +32,10 @@ call plug#begin()
 Plug 'Modeliner'                  "vim-scripts
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
-Plug 'iHavee/vim-monokai', {'as': 'monokai'}
+Plug 'sickill/vim-monokai', {'as': 'monokai'}
 Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
 Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax', 'tag': 'v0.17.0'}
-Plug 'plasticboy/vim-markdown', {'as': 'markdown', 'tag': '2.0.0'}
+Plug 'plasticboy/vim-markdown'
 Plug 'aperezdc/vim-template', {'as': 'template'}
 
 call plug#end()

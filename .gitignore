@@ -1,5 +1,6 @@
 .swap/*
 bundle/*
+plugged/*
 
 # Mac
 .DS_Store

@@ -35,12 +35,10 @@ $(HOME)/.%: %
 	ln -fs $(PWD)/$< $@
 
 install: $(clearfiles) $(TARGETS)
-	git submodule update --init
-	vim +PluginInstall +qall
+	vim +PlugInstall +qall
 
 update:
 	git pull
-	git submodule update --init
-	vim +PluginUpdate +qall
+	vim +PlugUpdate +qall
 
 .PHONY: install update clean_mine

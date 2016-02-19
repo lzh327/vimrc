@@ -4,24 +4,28 @@ call system("mkdir -p $HOME/.vim/.swap")
 """""""""""""""""""""""""
 " vundle
 """""""""""""""""""""""""
-if &compatible                      " be iMproved, required
-    set nocompatible
-endif
-filetype off                        " required
+"if &compatible                      " be iMproved, required
+"    set nocompatible
+"endif
+"filetype off                        " required
 
-set rtp+=$HOME/.vim/vundle/Vundle.vim   " submodule
-call vundle#begin()
-Plugin 'Modeliner'                  "vim-scripts
+"set rtp+=$HOME/.vim/vundle/Vundle.vim   " submodule
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim', {'rtp': '../vundle/'}
 
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdtree'
-Plugin 'iHavee/vim-monokai', {'name': 'monokai'}
-Plugin 'airblade/vim-gitgutter', {'name': 'gitgutter'}
-Plugin 'hail2u/vim-css3-syntax', {'name': 'css3-syntax'}
-Plugin 'plasticboy/vim-markdown', {'name': 'markdown'}
-Plugin 'aperezdc/vim-template', {'name': 'template'}
+call plug#begin()
+Plug 'Modeliner'                  "vim-scripts
 
-call vundle#end()                   " required
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdtree'
+Plug 'iHavee/vim-monokai', {'as': 'monokai'}
+Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
+Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax'}
+Plug 'plasticboy/vim-markdown', {'as': 'markdown', 'tag': '2.0.0'}
+Plug 'aperezdc/vim-template', {'as': 'template'}
+
+call plug#end()
+"call vundle#end()                   " required
 
 """""""""""""""""""""""""
 " global

@@ -37,6 +37,7 @@ Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
 Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax', 'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown', {'as' : 'markdown'}
 Plug 'aperezdc/vim-template', {'as': 'template'}
+Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist', {'as': 'plist'}
 
 call plug#end()
@@ -259,6 +260,8 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_no_default_key_mappings=1
 let g:vim_markdown_math=1
 let g:vim_markdown_frontmatter=1
+let g:vim_markdown_math = 1
+let g:vim_markdown_json_frontmatter = 1
 
 """""""""""""""""""""""""
 " Local config

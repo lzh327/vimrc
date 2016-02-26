@@ -32,13 +32,13 @@ call plug#begin('$HOME/.vim/bundle')
 Plug 'Modeliner'                  "vim-scripts
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
-Plug 'sickill/vim-monokai', {'as': 'monokai'}
-Plug 'airblade/vim-gitgutter', {'as': 'gitgutter'}
-Plug 'hail2u/vim-css3-syntax', {'as': 'css3-syntax', 'tag': 'v0.17.0'}
-Plug 'plasticboy/vim-markdown', {'as' : 'markdown'}
-Plug 'aperezdc/vim-template', {'as': 'template'}
+Plug 'sickill/vim-monokai'
+Plug 'airblade/vim-gitgutter'
+Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
+Plug 'plasticboy/vim-markdown'
+Plug 'aperezdc/vim-template'
 Plug 'elzr/vim-json'
-Plug 'darfink/vim-plist', {'as': 'plist'}
+Plug 'darfink/vim-plist'
 
 call plug#end()
 

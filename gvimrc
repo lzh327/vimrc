@@ -13,7 +13,7 @@ map <F2> :set guifont=Monospace\ 14<CR>
 
 " theme
 try
-    colorscheme monokai-light
+    colorscheme molokai
 catch
     colorscheme default
 endtry

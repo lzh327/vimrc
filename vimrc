@@ -32,7 +32,7 @@ call plug#begin('$HOME/.vim/bundle')
 Plug 'Modeliner'                  "vim-scripts
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
-Plug 'sickill/vim-monokai'
+Plug 'tomasr/molokai'
 Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown'
@@ -57,7 +57,7 @@ set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 " color
 try
     set t_Co=256
-    colorscheme monokai
+    colorscheme molokai
 catch
     colorscheme default
 endtry
@@ -86,6 +86,7 @@ set nobackup
 set nowritebackup
 set modifiable
 " set mouse=a                       " mouse wheel in xterm
+let g:netrw_home=$HOME.'/.vim/.swap'
 
 " Encoding
 set encoding=utf-8

@@ -81,11 +81,11 @@ set diffopt=filler,iwhite           " In diff mode, ignore whitespace changes an
 set history=1000                    " Remember 1000 commands
 set scrolloff=3                     " Start scrolling 3 lines before the horizontal window border
 set visualbell t_vb=                " Disable error bells
-set shortmess+=A                    "Always Always edit file, even when swap file is found
+set shortmess+=A                    " Always Always edit file, even when swap file is found
 set nobackup
 set nowritebackup
 set modifiable
-set mouse=a                         " mouse wheel
+set mouse=a                         " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
 
 " Encoding

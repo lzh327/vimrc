@@ -85,7 +85,7 @@ set shortmess+=A                    " Always Always edit file, even when swap fi
 set nobackup
 set nowritebackup
 set modifiable
-set mouse=a                         " Mouse wheel
+"set mouse=a                        " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
 
 " Encoding

@@ -33,12 +33,14 @@ Plug 'Modeliner'                  "vim-scripts
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomasr/molokai'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'aperezdc/vim-template'
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
 
 call plug#end()
 
@@ -62,12 +64,6 @@ catch
     colorscheme default
 endtry
 
-" Statusline
-if has("statusline")
-    set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}]\ %{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\"}\ [TYPE=%Y]\ [POS=%l,%v][%p%%]
-    set laststatus=2
-endif
-
 " Misc
 filetype plugin indent on           " Do filetype detection and load custom file plugins and indent files
 set hidden                          " Don't abandon buffers moved to the background
@@ -85,6 +81,7 @@ set shortmess+=A                    " Always Always edit file, even when swap fi
 set nobackup
 set nowritebackup
 set modifiable
+set laststatus=2
 "set mouse=a                        " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
 
@@ -138,7 +135,6 @@ autocmd BufReadPost *
             \ if line("'\"") > 0 && line ("'\"") <= line("$") |
             \     exe "normal g'\"zz" |
             \ endif |
-
 
 " After 4s of inactivity, check for external file modifications on next keyrpress
 au CursorHold * checktime
@@ -211,6 +207,37 @@ if has("cscope")
 end
 
 """""""""""""""""""""""""
+" airline
+"""""""""""""""""""""""""
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#symbol = '!'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:bufferline_echo = 0
+set timeoutlen=200
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbohs
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.crypt = ''
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
+
+"""""""""""""""""""""""""
 " CSS3-Syntax
 """""""""""""""""""""""""
 augroup VimCSS3Syntax
@@ -248,11 +275,6 @@ let g:license = "GPLv3"
 " Supertab
 """""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-"""""""""""""""""""""""""
-" GitGutter
-"""""""""""""""""""""""""
-let g:GitGutterEnable = 1
 
 """""""""""""""""""""""""
 " Markdown

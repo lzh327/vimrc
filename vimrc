@@ -29,11 +29,10 @@ endif
 
 call plug#begin('$HOME/.vim/bundle')
 
-Plug 'Modeliner'                  "vim-scripts
+Plug 'Modeliner'                    "vim-scripts
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomasr/molokai'
-"Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'aperezdc/vim-template'
@@ -212,8 +211,6 @@ end
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = '!'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:bufferline_echo = 0
 set timeoutlen=200
 
@@ -259,8 +256,7 @@ let NERDTreeShowFiles=1
 " autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """""""""""""""""""""""""
 " template

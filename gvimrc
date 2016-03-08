@@ -5,7 +5,6 @@ set guioptions-=L  "remove left-hand scroll bar
 set visualbell t_vb=
 
 autocmd VimEnter * set vb t_vb=
-set gcr = n:blinkon0
 set lines=50 columns=120
 
 map <F1> :set guifont=Monospace\ 9<CR>
@@ -21,9 +20,6 @@ endtry
 " macvim
 if has("gui_macvim")
     set guifont=Monaco:h14
-
-    " Fullscreen takes up entire screen
-    set fuoptions = maxhorz,maxvert
 
     " Command-Return for fullscreen
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>

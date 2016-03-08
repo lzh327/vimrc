@@ -14,15 +14,13 @@ catch
     colorscheme default
 endtry
 
-" macvim
-if has("gui_macvim")
+if has("gui_macvim")            " macvim
     set guifont=Monaco:h14
     map <F1> :set guifont=Monaco:h9<CR>
     map <F2> :set guifont=Monaco:h14<CR>
-
     " Command-Return for fullscreen
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
-else
+else                            " gvim
     set guifont=Monospace\ 14<CR>
     map <F1> :set guifont=Monospace\ 9<CR>
     map <F2> :set guifont=Monospace\ 14<CR>

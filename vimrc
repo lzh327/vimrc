@@ -81,7 +81,7 @@ set nobackup                        " close backup files
 set nowritebackup
 set modifiable
 set laststatus=2
-" set mouse=a                       " Mouse wheel
+set mouse=a                         " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
 
 " Encoding
@@ -139,39 +139,44 @@ au CursorHold * checktime
 let mapleader=","
 let localmapleader=","
 
-nmap        <Leader>s       :%S/
-vmap        <Leader>s       :S/
+" Follow scroll wheel to cursor
+map <ScrollWheelUp>     3k
+map <ScrollWheelDown>   3j
 
-vnoremap    .               :normal .<CR>
-vnoremap    @               :normal! @
+
+nmap <Leader>s  :%S/
+vmap <Leader>s  :S/
+
+vnoremap .  :normal .<CR>
+vnoremap @  :normal! @
 
 " up/down on displayed lines, not real lines. More useful than painful.
-noremap     k               gk
-noremap     j               gj
+noremap k   gk
+noremap j   gj
 
 " TODO toggle numbers
-map         <Leader>/       :nohlsearch<cr>
-map         <Home>          :tprev<CR>
-map         <End>           :tnext<CR>
+map <Leader>/   :nohlsearch<cr>
+map <Home>      :tprev<CR>
+map <End>       :tnext<CR>
 
 " TODO Do also cnext and cprev as a fallback
-map         <PageDown>      :lnext<CR>
-map         <PageUp>        :lprev<CR>
+map <PageDown>  :lnext<CR>
+map <PageUp>    :lprev<CR>
 
 " Disable K for manpages - not used often and easy to accidentally hit
-noremap     K               k
+noremap K   k
 
 " Resize window splits
-nnoremap    <C-k>           3<C-w>-
-nnoremap    <C-j>           3<C-w>+
-nnoremap    <C-h>           3<C-w><
-nnoremap    <C-l>           3<C-w>>
+nnoremap <C-k>  3<C-w>-
+nnoremap <C-j>  3<C-w>+
+nnoremap <C-h>  3<C-w><
+nnoremap <C-l>  3<C-w>>
 
-nnoremap    _               :split<cr>
-nnoremap    \|              :vsplit<cr>
+nnoremap _  :split<cr>
+nnoremap \| :vsplit<cr>
 
-vmap        s               :!sort<CR>
-vmap        u               :!sort -u<CR>
+vmap s  :!sort<CR>
+vmap u  :!sort -u<CR>
 
 " Write file when you forget to use sudo
 cmap        w!!             w !sudo tee % >/dev/null

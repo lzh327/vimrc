@@ -79,7 +79,7 @@ set nobackup                        " close backup files
 set nowritebackup
 set modifiable
 set laststatus=2
-"set mouse=a                        " Mouse wheel
+" set mouse=a                       " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
 
 " Encoding

@@ -75,7 +75,7 @@ set history=1000                    " Remember 1000 commands
 set scrolloff=3                     " Start scrolling 3 lines before the horizontal window border
 set visualbell t_vb=                " Disable error bells
 set shortmess+=A                    " Always Always edit file, even when swap file is found
-set nobackup
+set nobackup                        " close backup files
 set nowritebackup
 set modifiable
 set laststatus=2
@@ -88,12 +88,7 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
 
-" up/down on displayed lines, not real lines. More useful than painful.
-noremap k gk
-noremap j gj
-
 " Formatting, indentation and tabbing
-"set autoindent
 set autoindent smartindent
 set smarttab                        " Make <tab> and <backspace> smarter
 set expandtab
@@ -142,46 +137,42 @@ au CursorHold * checktime
 let mapleader=","
 let localmapleader=","
 
-nmap <Leader>s :%S/
-vmap <Leader>s :S/
+nmap        <Leader>s       :%S/
+vmap        <Leader>s       :S/
 
-vnoremap . :normal .<CR>
-vnoremap @ :normal! @
+vnoremap    .               :normal .<CR>
+vnoremap    @               :normal! @
 
-" Toggles
-set pastetoggle=<F1>
-" the nmap is just for quicker powerline feedback
-nmap <silent> <F1>      :set invpaste<CR>
-nmap          <F2>      :setlocal spell!<CR>
-imap          <F2> <C-o>:setlocal spell!<CR>
-nmap <silent> <F3>      :set invwrap<CR>
+" up/down on displayed lines, not real lines. More useful than painful.
+noremap     k               gk
+noremap     j               gj
+
 " TODO toggle numbers
-
-map <Leader>/ :nohlsearch<cr>
-map <Home> :tprev<CR>
-map <End>  :tnext<CR>
+map         <Leader>/       :nohlsearch<cr>
+map         <Home>          :tprev<CR>
+map         <End>           :tnext<CR>
 
 " TODO Do also cnext and cprev as a fallback
-map <PageDown> :lnext<CR>
-map <PageUp>   :lprev<CR>
+map         <PageDown>      :lnext<CR>
+map         <PageUp>        :lprev<CR>
 
 " Disable K for manpages - not used often and easy to accidentally hit
-noremap K k
+noremap     K               k
 
 " Resize window splits
-nnoremap <C-k>    3<C-w>-
-nnoremap <C-j>    3<C-w>+
-nnoremap <C-h>    3<C-w><
-nnoremap <C-l>    3<C-w>>
+nnoremap    <C-k>           3<C-w>-
+nnoremap    <C-j>           3<C-w>+
+nnoremap    <C-h>           3<C-w><
+nnoremap    <C-l>           3<C-w>>
 
-nnoremap _ :split<cr>
-nnoremap \| :vsplit<cr>
+nnoremap    _               :split<cr>
+nnoremap    \|              :vsplit<cr>
 
-vmap s :!sort<CR>
-vmap u :!sort -u<CR>
+vmap        s               :!sort<CR>
+vmap        u               :!sort -u<CR>
 
 " Write file when you forget to use sudo
-cmap w!! w !sudo tee % >/dev/null
+cmap        w!!             w !sudo tee % >/dev/null
 
 """""""""""""""""""""""""
 " Cscope
@@ -215,7 +206,7 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
-    " unicode symbohs
+    " unicode symbols instead of powerline fonts
     let g:airline_left_sep = ''
     let g:airline_left_alt_sep = ''
     let g:airline_right_sep = ''

@@ -2,10 +2,9 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-set visualbell t_vb=
 
 autocmd VimEnter * set vb t_vb=
-set lines=50 columns=100
+set lines=50 columns=120
 
 " theme
 try

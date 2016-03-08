@@ -18,7 +18,7 @@ if has("gui_macvim")            " macvim
     map <F1> :set guifont=Monaco:h12<CR>
     map <F2> :set guifont=Monaco:h14<CR>
     " Command-Return for fullscreen
-    macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+    macmenu Window.Toggle\ Full\ Screen\ Mode key=<C-D-CR>
 else                            " gvim
     set guifont=Monospace\ 12
     map <C-F1> :set guifont=Monospace\ 12<CR>

@@ -4,7 +4,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 autocmd VimEnter * set vb t_vb=
-set lines=50 columns=120
+set lines=35 columns=120
 
 " theme
 try

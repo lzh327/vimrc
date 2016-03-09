@@ -156,8 +156,8 @@ noremap j   gj
 
 " TODO toggle numbers
 map <Leader>/   :nohlsearch<cr>
-map <Home>      :tprev<CR>
-map <End>       :tnext<CR>
+map <S-l>       :tabprevious<CR>
+map <S-h>       :tabnext<CR>
 
 " TODO Do also cnext and cprev as a fallback
 map <PageDown>  :lnext<CR>
@@ -179,7 +179,7 @@ vmap s  :!sort<CR>
 vmap u  :!sort -u<CR>
 
 " Write file when you forget to use sudo
-cmap        w!!             w !sudo tee % >/dev/null
+cmap w!!    w !sudo tee % >/dev/null
 
 """""""""""""""""""""""""
 " Cscope
@@ -208,6 +208,10 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     let g:airline_powerline_fonts = 0
     let g:airline#extensions#whitespace#enabled = 1
     let g:airline#extensions#whitespace#symbol = '!'
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#show_buffers = 1
+    let g:airline#extensions#tabline#show_splits = 0
+    let g:airline#extensions#tabline#show_tabs = 0
     let g:bufferline_echo = 0
     set timeoutlen=200
     if !exists('g:airline_symbols')
@@ -218,6 +222,10 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     let g:airline_left_alt_sep = ''
     let g:airline_right_sep = ''
     let g:airline_right_alt_sep = ''
+    let g:airline#extensions#tabline#left_sep = ''
+    let g:airline#extensions#tabline#left_alt_sep = ''
+    let g:airline#extensions#tabline#right_sep = ''
+    let g:airline#extensions#tabline#right_alt_sep = ''
     let g:airline_symbols.crypt = ''
     let g:airline_symbols.linenr = '␊'
     let g:airline_symbols.linenr = '␤'

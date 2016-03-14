@@ -1,7 +1,7 @@
-" create needed folder
+" Create needed folder
 silent !mkdir -p $HOME/.vim/.swap
 
-" be iMproved, required
+" Be iMproved, required
 if &compatible
     set nocompatible
 endif
@@ -28,7 +28,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.vim/bundle')
-Plug 'Modeliner'                    "vim-scripts
+Plug 'Modeliner'
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomasr/molokai'
@@ -47,7 +47,6 @@ call plug#end()
 " global
 """""""""""""""""""""""""
 
-" Display options
 syntax on
 set cursorline
 "set cursorcolumn
@@ -64,19 +63,19 @@ catch
 endtry
 
 " Misc
-filetype plugin indent on           " Do filetype detection and load custom file plugins and indent files
-set hidden                          " Don't abandon buffers moved to the background
+filetype plugin indent on
+set hidden
 set wildmenu                        " Enhanced completion hints in command line
-set wildmode=list:longest,full      " Complete longest common match and show possible matches and wildmenu
-set backspace=eol,start,indent      " Allow backspacing over indent, eol, & start
+set wildmode=list:longest,full
+set backspace=eol,start,indent      " Allow backspace over indent, eol, & start
 set complete=.,w,b,u,U,t,i,d        " Do lots of scanning on tab completion
 set updatecount=100                 " Write swap file to disk every 100 chars
 set directory=$HOME/.vim/.swap      " Directory to use for the swap file
-set diffopt=filler,iwhite           " In diff mode, ignore whitespace changes and align unchanged lines
-set history=1000                    " Remember 1000 commands
-set scrolloff=3                     " Start scrolling 3 lines before the horizontal window border
+set diffopt=filler,iwhite
+set history=10000
+set scrolloff=3
 set visualbell t_vb=                " Disable error bells
-set shortmess+=A                    " Always Always edit file, even when swap file is found
+set shortmess+=A                    " Always edit file
 set nobackup                        " close backup files
 set nowritebackup
 set modifiable
@@ -120,11 +119,10 @@ set showmatch
 " Automatic wrapping and highlight colorcolumn
 set textwidth=80
 set colorcolumn=+1
-" Stop automatic wrapping and don't highlight colorcolumn
 autocmd FileType md,markdown,html,text set textwidth=0
 
 " text filetype
-autocmd BufNewFile,BufRead *.txt,*.text setf text
+autocmd BufNewFile,BufRead *.txt,*.text set filetype=text
 
 " to_html settings
 let html_number_lines = 1
@@ -138,7 +136,7 @@ autocmd BufReadPost *
             \     exe "normal g'\"zz" |
             \ endif |
 
-" After 4s of inactivity, check for external file modifications on next keyrpress
+" After 4s of inactivity, check for file modifications on next keyrpress
 au CursorHold * checktime
 
 """""""""""""""""""""""""
@@ -262,14 +260,16 @@ nnoremap <C-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
             \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
             \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.img',
-            \ '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$', '\.tiff$', '\.pdf$' ]
+            \ '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$', '\.tiff$',
+            \ '\.pdf$' ]
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
 " autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+"           \ && b:NERDTree.isTabTree()) | q | endif
 
 """""""""""""""""""""""""
 " template

@@ -39,7 +39,7 @@ Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.8'}
 Plug 'godlygeek/tabular'
-Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
+"Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 

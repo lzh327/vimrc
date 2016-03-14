@@ -98,7 +98,6 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=80
 set formatoptions-=t formatoptions+=croql
 set modeline
 
@@ -117,6 +116,15 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
+
+" Automatic wrapping and highlight colorcolumn
+set textwidth=80
+set colorcolumn=+1
+" Stop automatic wrapping and don't highlight colorcolumn
+autocmd FileType md,markdown,html,text set textwidth=0
+
+" text filetype
+autocmd BufNewFile,BufRead *.txt,*.text setf text
 
 " to_html settings
 let html_number_lines = 1

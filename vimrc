@@ -65,9 +65,9 @@ endtry
 " Misc
 filetype plugin indent on
 set hidden
-set wildmenu                        " Enhanced completion hints in command line
+set wildmenu                        " Enhanced completion hints in command
 set wildmode=list:longest,full
-set backspace=eol,start,indent      " Allow backspace over indent, eol, & start
+set backspace=eol,start,indent      " Allow backspace
 set complete=.,w,b,u,U,t,i,d        " Do lots of scanning on tab completion
 set updatecount=100                 " Write swap file to disk every 100 chars
 set directory=$HOME/.vim/.swap      " Directory to use for the swap file
@@ -116,13 +116,10 @@ set hlsearch
 set incsearch
 set showmatch
 
-" Automatic wrapping and highlight colorcolumn
-set textwidth=80
-set colorcolumn=+1
-autocmd FileType md,markdown,html,text set textwidth=0
-
-" text filetype
-autocmd BufNewFile,BufRead *.txt,*.text set filetype=text
+" Stoping automatic wrapping and highlight colorcolumn
+set textwidth=0
+autocmd FileType cmake,css,fortran,lisp,make,perl,sh,vim
+            \ setlocal textwidth=78 colorcolumn=+1
 
 " to_html settings
 let html_number_lines = 1
@@ -194,8 +191,8 @@ if has("cscope")
     " Use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
     set cscopetag
 
-    " Check cscope for definition of a symbol before checking ctags. Set to 1 if
-    " you want the reverse search order.
+    " Check cscope for definition of a symbol before checking ctags. Set to 1
+    " if you want the reverse search order.
     set csto=0
 
     " Add any cscope database in current directory

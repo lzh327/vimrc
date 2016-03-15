@@ -32,15 +32,20 @@ Plug 'Modeliner'
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomasr/molokai'
-Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
-Plug 'plasticboy/vim-markdown'
 Plug 'aperezdc/vim-template'
-Plug 'elzr/vim-json'
-Plug 'darfink/vim-plist'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.8'}
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
 Plug 'airblade/vim-gitgutter'
+
+Plug 'elzr/vim-json'
+Plug 'darfink/vim-plist'
+Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
+Plug 'plasticboy/vim-markdown'
+Plug 'pangloss/vim-javascript', {'tag': 'v0.1.0'}
+Plug 'klen/python-mode', {'tag': '0.8.1'}
+Plug 'fatih/vim-go', {'tag': 'v1.4'}
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 """""""""""""""""""""""""
@@ -291,6 +296,19 @@ let g:vim_markdown_math=1
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math = 1
 let g:vim_markdown_json_frontmatter = 1
+
+"""""""""""""""""""""""""
+" Golang
+"""""""""""""""""""""""""
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+let g:go_fmt_autosave = 0
 
 """""""""""""""""""""""""
 " Local config

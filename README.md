@@ -25,6 +25,7 @@ If the result is 8, that means your Terminal was using 8 bit color (e.g. xterm o
 
     $ echo "export TERM=xterm-256color" >> ~/.bashrc
 
+You may need unicode suported terminal to display unicode symbols, e.g. urxvt、tilda...
 
 Other Notes
 ------------

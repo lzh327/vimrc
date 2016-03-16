@@ -136,6 +136,7 @@ autocmd BufReadPost *
 au CursorHold * checktime
 
 au FileType html setl sw=2 sts=2 et
+
 """""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""

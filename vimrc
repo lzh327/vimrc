@@ -126,12 +126,6 @@ set textwidth=0
 autocmd FileType cmake,css,fortran,lisp,make,perl,sh,vim
             \ setlocal textwidth=78 colorcolumn=+1
 
-" to_html settings
-let html_number_lines = 1
-let html_ignore_folding = 1
-let html_use_css = 1
-let xml_use_xhtml = 1
-
 " When opening a file, always jump to the last cursor position
 autocmd BufReadPost *
             \ if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -141,6 +135,7 @@ autocmd BufReadPost *
 " After 4s of inactivity, check for file modifications on next keyrpress
 au CursorHold * checktime
 
+au FileType html setl sw=2 sts=2 et
 """""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""

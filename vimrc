@@ -44,7 +44,7 @@ Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': 'v0.1.0'}
 Plug 'klen/python-mode', {'tag': '0.8.1'}
-Plug 'fatih/vim-go', {'tag': 'v1.4'}
+Plug 'fatih/vim-go', {'tag': 'v1.5'}
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 

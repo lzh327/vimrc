@@ -307,6 +307,13 @@ if !empty(glob('~/.vim/bundle/python-syntax'))
 endif
 
 """""""""""""""""""""""""
+" VIM JSON
+"""""""""""""""""""""""""
+if !empty(glob('~/.vim/bundle/vim-json'))
+    let g:vim_json_syntax_conceal = 0
+endif
+
+"""""""""""""""""""""""""
 " Golang
 """""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-go'))

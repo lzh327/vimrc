@@ -213,9 +213,14 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     let g:airline#extensions#whitespace#enabled = 1
     let g:airline#extensions#whitespace#symbol = '!'
     let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#fnamemod = ':t'    " filename only
     let g:airline#extensions#tabline#show_buffers = 1
     let g:airline#extensions#tabline#show_splits = 0
     let g:airline#extensions#tabline#show_tabs = 0
+    let g:airline#extensions#tabline#tab_nr_type = 2
+    let g:airline#extensions#hunks#non_zero_only = 1    " git gutter
+    let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+    let g:airline_section_b = ''
     let g:bufferline_echo = 0
     set timeoutlen=200
     if !exists('g:airline_symbols')

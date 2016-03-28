@@ -296,7 +296,7 @@ let g:vim_markdown_json_frontmatter = 1
 """""""""""""""""""""""""
 " Python syntax highligh
 """""""""""""""""""""""""
-let python_highlight_all = 1
+let g:python_highlight_all = 1
 
 """""""""""""""""""""""""
 " Golang

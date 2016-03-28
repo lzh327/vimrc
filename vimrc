@@ -43,7 +43,7 @@ Plug 'darfink/vim-plist'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': 'v0.1.0'}
-Plug 'klen/python-mode', {'tag': '0.8.1'}
+Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.5'}
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
@@ -292,6 +292,11 @@ let g:vim_markdown_math=1
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math = 1
 let g:vim_markdown_json_frontmatter = 1
+
+"""""""""""""""""""""""""
+" Python syntax highligh
+"""""""""""""""""""""""""
+let python_highlight_all = 1
 
 """""""""""""""""""""""""
 " Golang

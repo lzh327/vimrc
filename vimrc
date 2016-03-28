@@ -107,7 +107,6 @@ set modeline
 
 " Undo
 set undolevels=10000
-" Allow undoes to persist even after a file is closed
 if has("persistent_undo")
     set undodir=$HOME/.vim/.swap
     set undofile
@@ -189,21 +188,13 @@ cmap w!!    w !sudo tee % >/dev/null
 " Cscope
 """""""""""""""""""""""""
 if has("cscope")
-    " Use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
     set cscopetag
-
-    " Check cscope for definition of a symbol before checking ctags. Set to 1
-    " if you want the reverse search order.
     set csto=0
-
-    " Add any cscope database in current directory
     if filereadable("cscope.out")
         cs add cscope.out
     endif
-
-    " Show msg when any other cscope db is added
     set cscopeverbose
-end
+endif
 
 """""""""""""""""""""""""
 " airline
@@ -251,70 +242,84 @@ endif
 """""""""""""""""""""""""
 " CSS3-Syntax
 """""""""""""""""""""""""
-augroup VimCSS3Syntax
-    autocmd!
-    autocmd FileType css setlocal iskeyword+=-
-augroup END
+if !empty(glob('~/.vim/bundle/vim-css3-syntax'))
+    augroup VimCSS3Syntax
+        autocmd!
+        autocmd FileType css setlocal iskeyword+=-
+    augroup END
+endif
 
 """""""""""""""""""""""""
 " NERDTree
 """""""""""""""""""""""""
-nnoremap <C-n> :NERDTreeToggle<cr>
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
-            \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
-            \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.img',
-            \ '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$', '\.tiff$',
-            \ '\.pdf$' ]
-let NERDTreeHighlightCursorline=1
-let NERDTreeShowBookmarks=1
-let NERDTreeShowFiles=1
-" autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
-"           \ && b:NERDTree.isTabTree()) | q | endif
+if !empty(glob('~/.vim/bundle/nerdtree'))
+    nnoremap <C-n> :NERDTreeToggle<cr>
+    let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
+                \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
+                \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$',
+                \ '\.img', '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$',
+                \ '\.tiff$', '\.pdf$' ]
+    let NERDTreeHighlightCursorline=1
+    let NERDTreeShowBookmarks=1
+    let NERDTreeShowFiles=1
+    " autocmd vimenter * NERDTree
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+    "           \ && b:NERDTree.isTabTree()) | q | endif
+endif
 
 """""""""""""""""""""""""
 " template
 """""""""""""""""""""""""
-" let g:templates_plugin_loaded = 1
-" let g:templates_no_autocmd = 1
-let g:username = "Register"
-let g:email = "registerdedicated(at)gmail.com"
-let g:license = "GPLv3"
+if !empty(glob('~/.vim/bundle/vim-template'))
+    " let g:templates_plugin_loaded = 1
+    " let g:templates_no_autocmd = 1
+    let g:username = "Register"
+    let g:email = "registerdedicated(at)gmail.com"
+    let g:license = "GPLv3"
+endif
 
 """""""""""""""""""""""""
 " Supertab
 """""""""""""""""""""""""
-let g:SuperTabDefaultCompletionType = "<c-n>"
+if !empty(glob('~/.vim/bundle/supertab'))
+    let g:SuperTabDefaultCompletionType = "<c-n>"
+endif
 
 """""""""""""""""""""""""
 " Markdown
 """""""""""""""""""""""""
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_no_default_key_mappings=1
-let g:vim_markdown_math=1
-let g:vim_markdown_frontmatter=1
-let g:vim_markdown_math = 1
-let g:vim_markdown_json_frontmatter = 1
+if !empty(glob('~/.vim/bundle/vim-markdown'))
+    let g:vim_markdown_folding_disabled=1
+    let g:vim_markdown_no_default_key_mappings=1
+    let g:vim_markdown_math=1
+    let g:vim_markdown_frontmatter=1
+    let g:vim_markdown_math = 1
+    let g:vim_markdown_json_frontmatter = 1
+endif
 
 """""""""""""""""""""""""
 " Python syntax highligh
 """""""""""""""""""""""""
-let g:python_highlight_all = 1
+if !empty(glob('~/.vim/bundle/python-syntax'))
+    let g:python_highlight_all = 1
+endif
 
 """""""""""""""""""""""""
 " Golang
 """""""""""""""""""""""""
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:go_fmt_autosave = 0
+if !empty(glob('~/.vim/bundle/vim-go'))
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_structs = 1
+    let g:go_highlight_interfaces = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_fmt_command = "goimports"
+    let g:go_fmt_fail_silently = 1
+    let g:go_fmt_autosave = 0
+endif
 
 """""""""""""""""""""""""
 " Local config

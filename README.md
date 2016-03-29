@@ -5,15 +5,15 @@ Installation
 
 To install, run
 
-    git clone git://github.com/iHavee/vimrc.git ~/.vim
-    cd ~/.vim && make install
+    $ git clone git://github.com/iHavee/vimrc.git ~/.vim
+    $ cd ~/.vim && make install
 
 To update the repository, run
 
-    make update
+    $ make update
 
 Note
------
+----
 
 If you are going to use this colorscheme of the configuration in Terminal mode (e.g. not in a GUI version like gvim or macvim), please consider setting your terminal emulator's colorscheme to used.
 
@@ -28,7 +28,7 @@ If the result is 8, that means your Terminal was using 8 bit color (e.g. xterm o
 You may need unicode suported terminal to display [airline unicode symbols](https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt#L184-L199).
 
 Other Notes
-------------
+-----------
 
 vimrc.mine and gvimrc.mine contain system-specific settings or other settings
 that should not be part of a general configuration.

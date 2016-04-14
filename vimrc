@@ -28,7 +28,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.vim/bundle')
-Plug 'Modeliner'
+Plug 'Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomasr/molokai'

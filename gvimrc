@@ -13,8 +13,8 @@ catch
 endtry
 
 if has("gui_macvim") || has("gui_mac") || has("mac")
-    set guifont=Monaco:h12
-    set lines=50 columns=130
+    set guifont=Monaco:h13
+    set lines=50 columns=120
     map <F1> :set guifont=Monaco:h12<CR>
     map <F2> :set guifont=Monaco:h14<CR>
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<C-D-CR>

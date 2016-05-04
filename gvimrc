@@ -14,14 +14,14 @@ catch
 endtry
 
 if has("gui_macvim") || has("gui_mac") || has("mac")
-    set guifont=Monaco:h13
-    map <F1> :set guifont=Monaco:h12<CR>
-    map <F2> :set guifont=Monaco:h14<CR>
+    set guifont=Monaco:h11
+    map <F1> :set guifont=Monaco:h11<CR>
+    map <F2> :set guifont=Monaco:h13<CR>
     macmenu Window.Toggle\ Full\ Screen\ Mode key=<C-D-CR>
 elseif has("unix")
-    set guifont=Monospace\ 13
-    map <C-F1> :set guifont=Monospace\ 12<CR>
-    map <C-F2> :set guifont=Monospace\ 14<CR>
+    set guifont=Monospace\ 11
+    map <C-F1> :set guifont=Monospace\ 11<CR>
+    map <C-F2> :set guifont=Monospace\ 13<CR>
 endif
 
 silent! so $HOME/.vim/gvimrc.mine

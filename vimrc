@@ -63,6 +63,7 @@ set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 try
     set t_Co=256
     colorscheme molokai
+    let g:molokai_original = 1
 catch
     colorscheme default
 endtry

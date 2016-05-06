@@ -34,7 +34,7 @@ Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.8'}
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular', {'tag': '1.0.0'}
 Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
 Plug 'airblade/vim-gitgutter'
 

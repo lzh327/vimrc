@@ -41,8 +41,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
-Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript', {'tag': 'v1.0.0'}
+Plug 'plasticboy/vim-markdown', {'tag': '2.0.0'}
+Plug 'pangloss/vim-javascript', {'tag': 'v0.1.0'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.5'}
 Plug 'vim-ruby/vim-ruby'

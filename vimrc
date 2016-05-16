@@ -36,7 +36,7 @@ Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.8'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
 Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', {'commit': 'cae4f72'}
 
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'

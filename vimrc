@@ -231,7 +231,7 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     let g:airline_symbols.paste = 'Þ'
     let g:airline_symbols.spell = 'Ꞩ'
     let g:airline_symbols.notexists = '∄'
-    let g:airline_symbols.whitespace = '⺊'
+    let g:airline_symbols.whitespace = 'Ξ'
 endif
 
 

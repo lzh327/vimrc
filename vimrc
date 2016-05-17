@@ -226,7 +226,7 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     let g:airline#extensions#tabline#right_sep = ''
     let g:airline#extensions#tabline#right_alt_sep = ''
     let g:airline_symbols.crypt = '🔒'
-    let g:airline_symbols.linenr = '〸'
+    let g:airline_symbols.linenr = '¶'
     let g:airline_symbols.branch = '⎇'
     let g:airline_symbols.paste = 'Þ'
     let g:airline_symbols.spell = 'Ꞩ'

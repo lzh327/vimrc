@@ -36,7 +36,7 @@ Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.8'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
 Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
-Plug 'airblade/vim-gitgutter', {'commit': 'cae4f72'}
+Plug 'mhinz/vim-signify'
 
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
@@ -263,6 +263,14 @@ if !empty(glob('~/.vim/bundle/nerdtree'))
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
     "           \ && b:NERDTree.isTabTree()) | q | endif
+endif
+
+"""""""""""""""""""""""""
+" Signify
+"""""""""""""""""""""""""
+if !empty(glob('~/.vim/bundle/vim-signify'))
+    let g:signify_vcs_list          = [ 'git', 'hg', 'svn' ]
+    let g:signify_sign_change       = '~'
 endif
 
 """""""""""""""""""""""""

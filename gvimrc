@@ -18,13 +18,13 @@ if has('unix')
         set guifont=Monaco:h11
         map <F1> :set guifont=Monaco:h11<CR>
         map <F2> :set guifont=Monaco:h13<CR>
-        macmenu Window.Toggle\ Full\ Screen\ Mode key=<C-D-CR>
+        macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>   " Command + Enter
     else
         set guifont=Monospace\ 11
         map <C-F1> :set guifont=Monospace\ 11<CR>
         map <C-F2> :set guifont=Monospace\ 13<CR>
     endif
-"elseif has("win32") || has('win64')
+" elseif has("win32") || has('win64')
 "   set ...
 endif
 

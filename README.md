@@ -25,7 +25,7 @@ If the result is 8, that means your Terminal was using 8 bit color (e.g. xterm o
 
     $ echo "export TERM=xterm-256color" >> ~/.bashrc
 
-You may need unicode suported terminal to display [airline unicode symbols](https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt#L184-L201).
+You may need unicode suported terminal to display [airline unicode symbols](https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt#L188-L205).
 
 Other Notes
 -----------

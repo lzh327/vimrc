@@ -30,7 +30,7 @@ endif
 call plug#begin('$HOME/.vim/bundle')
 Plug 'Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
+Plug 'scrooloose/nerdtree', {'tag': '5.0.0', 'on': 'NERDTreeToggle'}
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.8'}

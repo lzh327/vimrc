@@ -2,9 +2,9 @@
 silent !mkdir -p $HOME/.vim/.swap
 
 " Be iMproved, required
-if &compatible
+"if &compatible
     set nocompatible
-endif
+"endif
 
 " viminfo: remember certain things when we exit
 " (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
@@ -259,11 +259,6 @@ if !empty(glob('~/.vim/bundle/nerdtree'))
     let NERDTreeHighlightCursorline=1
     let NERDTreeShowBookmarks=1
     let NERDTreeShowFiles=1
-    " autocmd vimenter * NERDTree
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-    " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
-    "           \ && b:NERDTree.isTabTree()) | q | endif
 endif
 
 """""""""""""""""""""""""

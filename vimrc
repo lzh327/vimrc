@@ -41,7 +41,7 @@ Plug 'mhinz/vim-signify'
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
-Plug 'plasticboy/vim-markdown', {'tag': '2.0.0'}
+Plug 'plasticboy/vim-markdown', {'commit': 'a316954'}
 Plug 'pangloss/vim-javascript', {'tag': 'v0.1.0'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.6'}
@@ -292,7 +292,7 @@ endif
 """""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-markdown'))
     let g:vim_markdown_folding_disabled=1
-    "let g:vim_markdown_no_default_key_mappings=1
+    let g:vim_markdown_no_default_key_mappings=1
     let g:vim_markdown_math=1
     let g:vim_markdown_frontmatter=1
     let g:vim_markdown_math = 1

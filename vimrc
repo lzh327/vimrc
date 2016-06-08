@@ -265,7 +265,6 @@ endif
 """""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-signify'))
     let g:signify_vcs_list          = [ 'git', 'hg', 'svn' ]
-    let g:signify_sign_change       = '~'
 endif
 
 """""""""""""""""""""""""

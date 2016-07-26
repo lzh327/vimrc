@@ -40,7 +40,7 @@ Plug 'mhinz/vim-signify', {'commit': '37376d9'}
 
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
-Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.17.0'}
+Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.18.0'}
 Plug 'plasticboy/vim-markdown', {'commit': 'a316954'}
 Plug 'pangloss/vim-javascript', {'tag': 'v1.1.3'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}

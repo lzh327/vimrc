@@ -41,10 +41,10 @@ Plug 'mhinz/vim-signify'
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.18.0'}
-Plug 'plasticboy/vim-markdown', {'commit': 'a316954'}
-Plug 'pangloss/vim-javascript', {'tag': 'v1.1.3'}
+Plug 'plasticboy/vim-markdown', {'tag': '1.0.0'}
+Plug 'pangloss/vim-javascript', {'tag': '1.2'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.7.1'}
+Plug 'fatih/vim-go', {'tag': 'v1.8'}
 call plug#end()
 
 """""""""""""""""""""""""

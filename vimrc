@@ -23,7 +23,7 @@ set viminfo=%100,'100,/100,h,\"500,:1000,n$HOME/.vim/.swap/viminfo
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall | PlugInstall | so $HOME/.vimrc
 endif
 
@@ -128,7 +128,7 @@ autocmd FileType cmake,css,fortran,lisp,make,perl,sh,vim
 " When opening a file, always jump to the last cursor position
 autocmd BufReadPost *
             \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-            \     exe "normal g'\"zz" |
+            \ exe "normal g'\"zz" |
             \ endif |
 
 " After 4s of inactivity, check for file modifications on next keyrpress

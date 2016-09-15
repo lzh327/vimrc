@@ -42,9 +42,9 @@ Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.18.0'}
 Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript', {'tag': '1.2.1'}
+Plug 'pangloss/vim-javascript', {'tag': 'v1.2.2'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.8'}
+Plug 'fatih/vim-go', {'tag': 'v1.9'}
 call plug#end()
 
 """""""""""""""""""""""""

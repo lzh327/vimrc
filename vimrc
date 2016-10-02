@@ -2,9 +2,9 @@
 silent !mkdir -p $HOME/.vim/.swap
 
 " Be iMproved, required
-"if &compatible
+if &compatible
     set nocompatible
-"endif
+endif
 
 " viminfo: remember certain things when we exit
 " (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)

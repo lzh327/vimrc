@@ -28,7 +28,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.vim/bundle')
-Plug 'Modeliner', {'tag': '0.3.0'}
+Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0', 'on': 'NERDTreeToggle'}
 Plug 'tomasr/molokai'
@@ -40,7 +40,7 @@ Plug 'mhinz/vim-signify'
 
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
-Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.20.0'}
+Plug 'hail2u/vim-css3-syntax', {'tag': 'v0.22.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
